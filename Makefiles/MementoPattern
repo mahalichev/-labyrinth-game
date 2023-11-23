@@ -1,0 +1,16 @@
+MH = ../Headers/Memento
+MS = ../Sources/Memento
+
+all: Memento.o PlayerMemento.o EnemiesMemento.o Caretaker.o PlayerCaretaker.o EnemiesCaretaker.o
+Memento.o: $(MS)/Memento.cpp $(MH)/Memento.h
+	g++ -c $(MS)/Memento.cpp
+PlayerMemento.o: $(MS)/PlayerMemento.cpp $(MH)/PlayerMemento.h
+	g++ -c $(MS)/PlayerMemento.cpp
+EnemiesMemento.o: $(MS)/EnemiesMemento.cpp $(MH)/EnemiesMemento.h
+	g++ -c $(MS)/EnemiesMemento.cpp
+Caretaker.o: $(MS)/Caretaker.cpp $(MH)/Caretaker.h
+	g++ -c $(MS)/Caretaker.cpp
+PlayerCaretaker.o: $(MS)/PlayerCaretaker.cpp $(MH)/PlayerCaretaker.h
+	g++ -c $(MS)/PlayerCaretaker.cpp
+EnemiesCaretaker.o: $(MS)/EnemiesCaretaker.cpp $(MH)/EnemiesCaretaker.h
+	g++ -c $(MS)/EnemiesCaretaker.cpp

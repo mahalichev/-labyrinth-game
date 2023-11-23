@@ -1,0 +1,28 @@
+FH = ../Headers/Factory
+FS = ../Sources/Factory
+
+all: Element.o AddScoreElement.o DamageElement.o HPElement.o MoveElement.o TargetElement.o Creator.o AddScoreElementCreator.o DamageElementCreator.o HPElementCreator.o MoveElementCreator.o TargetElementCreator.o
+Element.o: $(FS)/Element.cpp $(FH)/Element.h
+	g++ -c $(FS)/Element.cpp
+AddScoreElement.o: $(FS)/AddScoreElement.cpp $(FH)/AddScoreElement.h
+	g++ -c $(FS)/AddScoreElement.cpp
+DamageElement.o: $(FS)/DamageElement.cpp $(FH)/DamageElement.h
+	g++ -c $(FS)/DamageElement.cpp
+HPElement.o: $(FS)/HPElement.cpp $(FH)/HPElement.h
+	g++ -c $(FS)/HPElement.cpp
+MoveElement.o: $(FS)/MoveElement.cpp $(FH)/MoveElement.h
+	g++ -c $(FS)/MoveElement.cpp
+TargetElement.o: $(FS)/TargetElement.cpp $(FH)/TargetElement.h
+	g++ -c $(FS)/TargetElement.cpp
+Creator.o: $(FS)/Creator.cpp $(FH)/Creator.h
+	g++ -c $(FS)/Creator.cpp
+AddScoreElementCreator.o: $(FS)/AddScoreElementCreator.cpp $(FH)/AddScoreElementCreator.h
+	g++ -c $(FS)/AddScoreElementCreator.cpp
+DamageElementCreator.o: $(FS)/DamageElementCreator.cpp $(FH)/DamageElementCreator.h
+	g++ -c $(FS)/DamageElementCreator.cpp
+HPElementCreator.o: $(FS)/HPElementCreator.cpp $(FH)/HPElementCreator.h
+	g++ -c $(FS)/HPElementCreator.cpp
+MoveElementCreator.o: $(FS)/MoveElementCreator.cpp $(FH)/MoveElementCreator.h
+	g++ -c $(FS)/MoveElementCreator.cpp
+TargetElementCreator.o: $(FS)/TargetElementCreator.cpp $(FH)/TargetElementCreator.h
+	g++ -c $(FS)/TargetElementCreator.cpp

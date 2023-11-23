@@ -1,0 +1,26 @@
+CH = ../Headers/Commands
+CS = ../Sources/Commands
+
+all: Command.o DisplayFieldCommand.o DisplayInfoCommand.o ExitCommand.o GameLogicCommand.o MoveCommand.o RunCommand.o StartCommand.o SaveCommand.o LoadCommand.o FileExceptions.o
+Command.o: $(CS)/Command.cpp $(CH)/Command.h
+	g++ -c $(CS)/Command.cpp
+DisplayFieldCommand.o: $(CS)/DisplayFieldCommand.cpp $(CH)/DisplayFieldCommand.h
+	g++ -c $(CS)/DisplayFieldCommand.cpp
+DisplayInfoCommand.o: $(CS)/DisplayInfoCommand.cpp $(CH)/DisplayInfoCommand.h
+	g++ -c $(CS)/DisplayInfoCommand.cpp
+ExitCommand.o: $(CS)/ExitCommand.cpp $(CH)/ExitCommand.h
+	g++ -c $(CS)/ExitCommand.cpp
+GameLogicCommand.o: $(CS)/GameLogicCommand.cpp $(CH)/GameLogicCommand.h
+	g++ -c $(CS)/GameLogicCommand.cpp
+MoveCommand.o: $(CS)/MoveCommand.cpp $(CH)/MoveCommand.h
+	g++ -c $(CS)/MoveCommand.cpp
+RunCommand.o: $(CS)/RunCommand.cpp $(CH)/RunCommand.h
+	g++ -c $(CS)/RunCommand.cpp
+StartCommand.o: $(CS)/StartCommand.cpp $(CH)/StartCommand.h
+	g++ -c $(CS)/StartCommand.cpp
+SaveCommand.o: $(CS)/SaveCommand.cpp $(CH)/SaveCommand.h
+	g++ -c $(CS)/SaveCommand.cpp
+LoadCommand.o: $(CS)/LoadCommand.cpp $(CH)/LoadCommand.h
+	g++ -c $(CS)/LoadCommand.cpp
+FileExceptions.o: $(CS)/FileExceptions.cpp $(CH)/FileExceptions.h
+	g++ -c $(CS)/FileExceptions.cpp

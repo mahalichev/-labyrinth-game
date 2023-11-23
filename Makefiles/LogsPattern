@@ -1,0 +1,14 @@
+LH = ../Headers/Logs
+LS = ../Sources/Logs
+
+all: Abstraction.o CellObserver.o IObserver.o ISubject.o PlayerObserver.o
+Abstraction.o: $(LS)/Abstraction.cpp $(LH)/Abstraction.h
+	g++ -c $(LS)/Abstraction.cpp
+CellObserver.o: $(LS)/CellObserver.cpp $(LH)/CellObserver.h
+	g++ -c $(LS)/CellObserver.cpp
+IObserver.o: $(LS)/IObserver.cpp $(LH)/IObserver.h
+	g++ -c $(LS)/IObserver.cpp
+ISubject.o: $(LS)/ISubject.cpp $(LH)/ISubject.h
+	g++ -c $(LS)/ISubject.cpp
+PlayerObserver.o: $(LS)/PlayerObserver.cpp $(LH)/PlayerObserver.h
+	g++ -c $(LS)/PlayerObserver.cpp

@@ -1,0 +1,24 @@
+EH = ../Headers/Enemies
+ES = ../Sources/Enemies
+
+all: Enemy.o EnemiesContext.o State.o EnemyHandle.o PlayerHandle.o PlayerAttackHandle.o BuffsHandle.o DamageHandle.o StealPointsHandle.o MoveHandle.o
+Enemy.o: $(ES)/Enemy.cpp $(EH)/Enemy.hpp
+	g++ -c $(ES)/Enemy.cpp
+EnemiesContext.o: $(ES)/EnemiesContext.cpp $(EH)/EnemiesContext.h
+	g++ -c $(ES)/EnemiesContext.cpp
+State.o: $(ES)/State.cpp $(EH)/State.h
+	g++ -c $(ES)/State.cpp
+EnemyHandle.o: $(ES)/EnemyHandle.cpp $(EH)/EnemyHandle.h
+	g++ -c $(ES)/EnemyHandle.cpp
+PlayerHandle.o: $(ES)/PlayerHandle.cpp $(EH)/PlayerHandle.h
+	g++ -c $(ES)/PlayerHandle.cpp
+PlayerAttackHandle.o: $(ES)/PlayerAttackHandle.cpp $(EH)/PlayerAttackHandle.h
+	g++ -c $(ES)/PlayerAttackHandle.cpp
+BuffsHandle.o: $(ES)/BuffsHandle.cpp $(EH)/BuffsHandle.h
+	g++ -c $(ES)/BuffsHandle.cpp
+DamageHandle.o: $(ES)/DamageHandle.cpp $(EH)/DamageHandle.h
+	g++ -c $(ES)/DamageHandle.cpp
+StealPointsHandle.o: $(ES)/StealPointsHandle.cpp $(EH)/StealPointsHandle.h
+	g++ -c $(ES)/StealPointsHandle.cpp
+MoveHandle.o: $(ES)/MoveHandle.cpp $(EH)/MoveHandle.h
+	g++ -c $(ES)/MoveHandle.cpp

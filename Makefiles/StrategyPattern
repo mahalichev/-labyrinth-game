@@ -1,0 +1,18 @@
+SH = ../Headers/Strategy
+SS = ../Sources/Strategy
+
+all: Strategy.o StrategyContext.o AddScoreStrategy.o DamageStrategy.o HPStrategy.o MoveStrategy.o TargetStrategy.o
+Strategy.o: $(SS)/Strategy.cpp $(SH)/Strategy.h
+	g++ -c $(SS)/Strategy.cpp
+StrategyContext.o: $(SS)/StrategyContext.cpp $(SH)/StrategyContext.h
+	g++ -c $(SS)/StrategyContext.cpp
+AddScoreStrategy.o: $(SS)/AddScoreStrategy.cpp $(SH)/AddScoreStrategy.h
+	g++ -c $(SS)/AddScoreStrategy.cpp
+DamageStrategy.o: $(SS)/DamageStrategy.cpp $(SH)/DamageStrategy.h
+	g++ -c $(SS)/DamageStrategy.cpp
+HPStrategy.o: $(SS)/HPStrategy.cpp $(SH)/HPStrategy.h
+	g++ -c $(SS)/HPStrategy.cpp
+MoveStrategy.o: $(SS)/MoveStrategy.cpp $(SH)/MoveStrategy.h
+	g++ -c $(SS)/MoveStrategy.cpp
+TargetStrategy.o: $(SS)/TargetStrategy.cpp $(SH)/TargetStrategy.h
+	g++ -c $(SS)/TargetStrategy.cpp
